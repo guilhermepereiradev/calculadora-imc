@@ -19,7 +19,6 @@
                 <label>Altura: <input type="number" id="altura" placeholder="1.72" class="inputPadrao"></label>
                 <input type="button" value="Calcular" onclick="calcular()" class="botao">
                 <div id="res" class="resultado"></div>
-                
 
                 <table>
                     <thead>
@@ -62,7 +61,7 @@
        function calcular(){
            var peso = window.document.getElementById("peso");
            var altura = window.document.getElementById("altura");
-           var res = window.document.getElementById("res");
+           var res = window.document.getElementById("res"); 
 
            var n1 = Number(peso.value);
            var n2 = Number(altura.value);
@@ -70,8 +69,7 @@
            var resultado = n1 / (n2 * n2);
 
            res.innerText = resultado.toFixed(2);
-
-       } 
+       }     
 
     </script>
 </body>
