@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IMC</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+
+    </style>
+
+</head>
+<body>
+    <main>
+            <div class="main">
+                <h1>Calculando IMC</h1>
+                <label>Peso: <input type="number" id="peso" placeholder="78.5" class="inputPadrao"></label>
+                <label>Altura: <input type="number" id="altura" placeholder="1.72" class="inputPadrao"></label>
+                <input type="button" value="Calcular" onclick="calcular()" class="botao">
+                <div id="res" class="resultado"></div>
+                
+
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Classifcação</th>
+                            <th>IMC</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Abaixo do peso</td>
+                            <td>Abaixo 18.5</td>
+                        </tr>
+                        <tr>
+                            <td>Peso Normal</td>
+                            <td>18.5 - 24,9</td>
+                        </tr>
+                        <tr>
+                            <td>Sobrepeso</td>
+                            <td>25 - 29,9</td>
+                        </tr>
+                        <tr>
+                            <td>Obesidade Grau I</td>
+                            <td>30 - 34,9</td>
+                        </tr>
+                        <tr>
+                            <td>Obesidade Grau II</td>
+                            <td>35 - 39,9</td>
+                        </tr>
+                        <tr>
+                            <td>Obesidade Grau II ou Mórbida</td>
+                            <td>Maior ou Igual 40</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            
+    </main>
+    <script>
+       function calcular(){
+           var peso = window.document.getElementById("peso");
+           var altura = window.document.getElementById("altura");
+           var res = window.document.getElementById("res");
+
+           var n1 = Number(peso.value);
+           var n2 = Number(altura.value);
+
+           var resultado = n1 / (n2 * n2);
+
+           res.innerText = resultado.toFixed(2);
+
+       } 
+
+    </script>
+</body>
+</html>
