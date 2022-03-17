@@ -13,11 +13,11 @@
 </head>
 <body>
     <main>
-            <div class="main">
+            <div class="caixa">
                 <h1>Calculando IMC</h1>
                 <div class="entrada">
-                    <label>Peso: <input type="number" id="peso" placeholder="78.5" class="inputPadrao"></label>
-                    <label>Altura: <input type="number" id="altura" placeholder="1.72" class="inputPadrao"></label>
+                    <label>Peso: <input type="number" id="peso" placeholder="69.4" class="inputPadrao"></label>
+                    <label>Altura: <input type="number" id="altura" placeholder="1.73" class="inputPadrao"></label>
                 </div>
                 <input type="button" value="Calcular" onclick="calcular()" class="botao">
                 <div id="res"></div>
@@ -99,6 +99,10 @@
            
            if ( imc >= 40) {
                classificacao.innerText = "Obesidade Grau III ou Mórbida";
+           }
+
+           if (isNaN(imc)) {
+                res.innerText = "";
            }
 
        }
