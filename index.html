@@ -78,25 +78,15 @@
 
            if ( imc < 18.5) {
                classificacao.innerText = "Abaixo do peso";
-           }
-
-           if ( imc >= 18.5 && imc <= 24.99) {
+           } else if ( imc >= 18.5 && imc <= 24.99) {
                classificacao.innerText = "Peso Normal";
-           }
-
-           if ( imc >= 25 && imc <= 29.99) {
+           } else if ( imc >= 25 && imc <= 29.99) {
                classificacao.innerText = "Sobrepeso";
-           }
-           
-           if ( imc >= 30 && imc <= 34.99) {
+           } else if ( imc >= 30 && imc <= 34.99) {
                classificacao.innerText = "Obesidade Grau I";
-           }
-           
-           if ( imc >= 35 && imc <= 39.99) {
+           } else if ( imc >= 35 && imc <= 39.99) {
                classificacao.innerText = "Obesidade Grau II";
-           }
-           
-           if ( imc >= 40) {
+           } else{
                classificacao.innerText = "Obesidade Grau III ou Mórbida";
            }
 
